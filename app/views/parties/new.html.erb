@@ -1,0 +1,13 @@
+<h1>Nouvelle partie</h1>
+<p>Constituez le mot le plus long avec ces lettres :</p>
+
+<ul>
+  <% @ten_letters_list.each do |letter| %>
+    <li><%= letter %></li>
+  <% end %>
+</ul>
+
+<%= simple_form_for [@game, @partie], url: game_parties_path(@game), method: :post do |f| %>
+  <%= f.input :word, label: "Votre réponse" %>
+  <%= f.submit "Valider", class: "btn btn-flat" %>
+<% end %>

@@ -1,0 +1,12 @@
+<p>Nombre de parties :</p>
+<p>Meilleur score :</p>
+<p>Nombre de mots :</p>
+<p>Score actuel :</p>
+
+<ul>
+  <% @ten_letters_list.each do |letter| %>
+    <li><%= letter %></li>
+  <% end %>
+</ul>
+
+<%= @partie.word %>
